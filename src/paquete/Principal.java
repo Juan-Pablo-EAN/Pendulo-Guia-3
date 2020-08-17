@@ -1,20 +1,19 @@
 package paquete;
-
-import java.util.Scanner;
-
+import javax.swing.JOptionPane;
 public class Principal {
-    
-    public static void main(String[] args){
+    public static void main(String args[]){
         int longitud = 0;
         int aceleracion = 0;
-        Scanner entrada = new Scanner(System.in);
+        String longi = "";
+        String acel = "";
         
-        System.out.println("¿Cual es la longitud de la cuerda del pendulo?");
-        longitud = entrada.nextInt();
-        System.out.println("¿Cual es la aceleración del pendulo?");
-        aceleracion = entrada.nextInt();
+        longi = JOptionPane.showInputDialog("¿Cual es la longitud de la cuerda del pendulo?");
+        longitud = Integer.parseInt(longi);
+        acel = JOptionPane.showInputDialog("¿Cual es la aceleración del pendulo?");
+        aceleracion = Integer.parseInt(acel);
         
         Pendulo metodos = new Pendulo(longitud, aceleracion);
         metodos.resultado();
+        
     }
 }

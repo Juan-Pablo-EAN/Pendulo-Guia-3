@@ -1,6 +1,7 @@
 package paquete;
 
 import java.text.DecimalFormat;
+import javax.swing.JOptionPane;
 
 public class Pendulo { //objeto
 
@@ -18,7 +19,7 @@ public class Pendulo { //objeto
     public void resultado(){
         DecimalFormat dec = new DecimalFormat("#.00");
         oscilacion();
-        System.out.println("La oscilación del pendulo es: " + dec.format(o));
+        JOptionPane.showMessageDialog(null, "La oscilación del pendulo es: " + dec.format(o));
     }
 
 }
